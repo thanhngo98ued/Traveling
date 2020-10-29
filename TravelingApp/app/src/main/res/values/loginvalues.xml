@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundLogin">#FAE6E6</color>
+    <color name="iconLogin">#EDB2B2</color>
+    <color name="textFacebook">#3362BB</color>
+    <color name="texttkmk">#C4C4C4</color>
+</resources>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="RtlHardcoded">
+
+        <FrameLayout
+            android:id="@+id/frameBackground"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:background="@color/iconLogin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edSearch"
+                    android:layout_width="310dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/customeditsearch"
+                    android:drawableLeft="@drawable/iconsearch"
+                    android:drawablePadding="2dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:hint="Search here...."
+                    android:padding="5dp"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintHorizontal_bias="0.512"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="Autofill,TextFields" />
+
+                <Button
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/iconmenu"
+                    app:layout_constraintLeft_toRightOf="@+id/edSearch"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="114dp"
+                    android:layout_marginTop="166dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/customimageone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edSearch"
+                    tools:ignore="ContentDescription" />
+
+                <RatingBar
+                    android:id="@+id/rtgOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:numStars="3"
+                    android:stepSize="0.5"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgOne" />
+
+                <TextView
+                    android:id="@+id/rateSoccer"
+                    android:layout_width="111dp"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:text="2.5/3"
+                    android:textColor="#000000"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtgOne" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtCatelogy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="290dp"
+            android:fontFamily="@font/robotomedium"
+            android:text="CATELOGY"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameBackground" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCatelogy"
+            tools:ignore="MissingConstraints"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/txtSuggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="290dp"
+            android:fontFamily="@font/robotomedium"
+            android:text="SUGGEST"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerMain"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imgTwo"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/customimageone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSuggest"
+            tools:ignore="ContentDescription" />
+
+        <RatingBar
+            android:id="@+id/rtgTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:numStars="3"
+            android:stepSize="0.5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgTwo" />
+
+        <TextView
+            android:id="@+id/rateSoccertwo"
+            android:layout_width="111dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:text="2.5/3"
+            android:textColor="#000000"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rtgTwo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
